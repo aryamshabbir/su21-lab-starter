@@ -77,6 +77,11 @@ main:
 # Think: why might having a1 be useful?
 f:
     # YOUR CODE GOES HERE!
+    addi t0, a0, 3        # index = input + 3
+    slli t0, t0, 2        # multiply by 4 to get byte offset
+    add t1, a1, t0        # t1 = base address + offset
+    lw a0, 0(t1)          # load output[index] into a0
+    jr ra                 # return
 
     jr ra               # Always remember to jr ra after your function!
 
