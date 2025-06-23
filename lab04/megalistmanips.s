@@ -205,5 +205,5 @@ print_loop:
 malloc:
     mv a1, a0
     li a0, 9
-   Â ecall
-Â Â Â Â ret
+    ecall
+    ret
